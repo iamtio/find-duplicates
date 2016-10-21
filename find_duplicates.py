@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # coding=utf-8
 
 """A tool to find duplicate files
@@ -131,7 +131,8 @@ class Comparator(object):
                 os.unlink(file_name)
         return file_tree
 
-if __name__ == '__main__':
+
+def main():
     parser = argparse.ArgumentParser(
         description='Find duplicates of files'
     )
@@ -143,3 +144,6 @@ if __name__ == '__main__':
                         action='store_true')
     comparator = Comparator(**vars(parser.parse_args()))
     comparator.compare()
+
+if __name__ == '__main__':
+    main()
