@@ -1,0 +1,4 @@
+*.py[cod]
+build/
+dist/
+find_duplicates.egg-info
